@@ -1,0 +1,90 @@
+.q-field {
+  font-size: 1.6rem;
+
+  &--filled {
+    .q-field__control {
+      background: $light-blue;
+      border: 1px solid #fff;
+    }
+  }
+
+  &--rounded {
+    .q-field__control {
+      border-radius: 4px;
+      border: 1px solid #E2E6EF;
+    }
+  }
+
+  &--outlined {
+    .q-field {
+      &__control {
+        &:before {
+          display: block;
+          border: 1px solid $dark;
+        }
+      }
+    }
+  }
+
+  &--borderless {
+    .q-field__control:after {
+      display: none !important;
+    }
+  }
+
+  &--labeled {
+    .q-field__native {
+      padding-top: 18px;
+      padding-bottom: 6px;
+    }
+    .q-field__control-container {
+      padding-top: 0;
+    }
+  }
+
+  &--dark {
+    .q-field__control {
+      background: $dark !important;
+      border: none;
+    }
+    .q-field__label {
+      color: $dark;
+    }
+  }
+
+  &__control {
+    height: auto;
+    min-height: 46px;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
+
+    &:after, &:before {
+      display: none;
+      border: none;
+    }
+  }
+
+  &__label {
+    text-transform: lowercase;
+    top: 13px
+  }
+
+  &__native {
+    color: $dark;
+    min-height: 46px;
+    //white-space: nowrap;
+    overflow: hidden;
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__marginal {
+    height: 46px;
+  }
+}
+
+.q-textarea .q-field__native {
+  padding: 12px 0;
+}

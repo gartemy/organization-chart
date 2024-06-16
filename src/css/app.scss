@@ -1,0 +1,46 @@
+// app global css in SCSS form
+
+@import 'fonts';
+@import './components/q-input';
+
+* {
+  margin:  0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Manrope, Roboto, sans-serif;
+  font-size:   1.6rem;
+}
+
+.q-page-container {
+  display:        flex;
+  flex-direction: column;
+}
+
+.q-item__section--side {
+  min-width: auto;
+}
+
+.text-h5 {
+  font-size: 2.2rem;
+}
+
+.max-w500 {
+  max-width: 500px;
+}
+
+@media print {
+  @page {
+    size: landscape;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust:               exact;
+    background:                 #f0f4f8;
+  }
+}
